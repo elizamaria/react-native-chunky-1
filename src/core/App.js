@@ -1,4 +1,4 @@
-import { StackNavigator, TabNavigator, DrawerNavigator, DrawerView } from 'react-navigation'
+import { StackNavigator, TabNavigator, DrawerNavigator, DrawerView, DrawerItems } from 'react-navigation'
 import React, { PureComponent } from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Image, Platform, Button, ScrollView } from 'react-native'
@@ -183,7 +183,7 @@ export default class App extends PureComponent {
             backgroundColor:  Styles.styleColor(this.props.theme.navigationColor)
           }
         },
-        contentComponent: props => <ScrollView style={{ backgroundColor: Styles.styleColor(this.props.theme.navigationColor) }}><DrawerView.Items {...props} /></ScrollView>
+        contentComponent: props => <ScrollView style={{ backgroundColor: Styles.styleColor(this.props.theme.navigationColor) }}><DrawerItems {...props} /></ScrollView>
       })
     }
 
